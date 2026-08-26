@@ -142,7 +142,7 @@ const filteredKajian = computed(() => {
 
 onMounted(async () => {
   try {
-    const response = await fetch('http://localhost/kajian-admin-api/list-kajian.php')
+    const response = await fetch('http://jadwalkajian.great-site.net/api/list-kajian.php')
     const data = await response.json()
 
     kajianList.value = data.kajian
@@ -175,7 +175,7 @@ function handleEdit(id) {
 
 async function handleDelete(id) {
   try {
-    const response = await fetch(`http://localhost/kajian-admin-api/hapus-kajian.php?id=${id}`, {
+    const response = await fetch(`http://jadwalkajian.great-site.net/api/hapus-kajian.php?id=${id}`, {
       method: 'DELETE'
     })
 

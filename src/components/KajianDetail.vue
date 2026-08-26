@@ -79,7 +79,7 @@ onMounted(async () => {
   const id = route.params.id
 
   try {
-    const response = await fetch(`http://localhost/kajian-admin-api/get-kajian.php?id=${id}`)
+    const response = await fetch(`http://jadwalkajian.great-site.net/api/get-kajian.php?id=${id}`)
     const data = await response.json()
 
     if (!response.ok) {

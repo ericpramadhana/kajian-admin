@@ -110,7 +110,7 @@ const searchQuery = ref('')
 
 onMounted(async () => {
   try {
-    const response = await fetch('http://localhost/kajian-admin-api/list-kajian.php')
+    const response = await fetch('http://jadwalkajian.great-site.net/api/list-kajian.php')
     const data = await response.json()
     kajianList.value = data.kajian
   } catch (err) {
