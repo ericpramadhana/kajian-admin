@@ -165,7 +165,7 @@ onMounted(async () => {
   if (!isEditMode.value) return
 
   try {
-    const response = await fetch(`http://jadwalkajian.great-site.net/api/get-kajian.php?id=${kajianId.value}`)
+    const response = await fetch(`https://jadwalkajian.great-site.net/api/get-kajian.php?id=${kajianId.value}`)
     const data = await response.json()
 
     if (!response.ok) {
@@ -328,8 +328,8 @@ async function handleSimpan() {
   }
 
   const url = isEditMode.value
-  ? 'http://jadwalkajian.great-site.net/api/update-kajian.php'
-  : 'http://jadwalkajian.great-site.net/api/simpan-kajian.php'
+  ? 'https://jadwalkajian.great-site.net/api/update-kajian.php'
+  : 'https://jadwalkajian.great-site.net/api/simpan-kajian.php'
 
   if (isEditMode.value) {
     payload.id = kajianId.value

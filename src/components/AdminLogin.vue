@@ -40,7 +40,7 @@ async function handleLogin() {
   loading.value = true
 
   try {
-    const response = await fetch('http://jadwalkajian.great-site.net/api/login.php', {
+    const response = await fetch('https://jadwalkajian.great-site.net/api/login.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ pin: pin.value })
