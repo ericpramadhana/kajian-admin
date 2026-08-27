@@ -4,7 +4,7 @@
       <div class="header-top"></div>
       <div class="nav">
         <router-link to="/">
-          <img src="/Icons/left.svg" alt="Kembali" />
+          <img src="/icons/left.svg" alt="Kembali" />
         </router-link>
         <h3>Detail Kajian</h3>
       </div>
@@ -18,7 +18,7 @@
       <template v-else-if="kajian">
         <div class="kajian-card">
           <div class="kajian-date">
-            <img src="/Icons/date.svg" alt="" />
+            <img src="/icons/date.svg" alt="" />
             <p>{{ formatTanggalPanjang(kajian.tanggal) }}</p>
           </div>
           <div class="kajian-time">
@@ -34,13 +34,13 @@
 
         <div class="lokasi-card">
           <div class="title-lokasi">
-            <img src="/Icons/lokasi-red.svg" alt="" />
+            <img src="/icons/lokasi-red.svg" alt="" />
             <h4>Lokasi</h4>
           </div>
           <h3>{{ kajian.nama_masjid }}</h3>
           <a :href="kajian.link_maps" target="_blank" rel="noopener">
             <div class="detail-lokasi">
-              <img src="/Icons/marker.svg" alt="" />
+              <img src="/icons/marker.svg" alt="" />
               <h3>Buka Lokasi di Google Maps</h3>
             </div>
           </a>
@@ -79,7 +79,7 @@ onMounted(async () => {
   const id = route.params.id
 
   try {
-    const response = await fetch(`https://jadwalkajian.great-site.net/api/get-kajian.php?id=${id}`)
+    const response = await fetch(`/api/get-kajian.php?id=${id}`)
     const data = await response.json()
 
     if (!response.ok) {

@@ -142,7 +142,7 @@ const filteredKajian = computed(() => {
 
 onMounted(async () => {
   try {
-    const response = await fetch('https://jadwalkajian.great-site.net/api/list-kajian.php')
+    const response = await fetch('/api/list-kajian.php')
     const data = await response.json()
 
     kajianList.value = data.kajian
@@ -175,9 +175,9 @@ function handleEdit(id) {
 
 async function handleDelete(id) {
   try {
-    const response = await fetch(`https://jadwalkajian.great-site.net/api/hapus-kajian.php?id=${id}`, {
-      method: 'DELETE'
-    })
+    const response = await fetch(`/api/hapus-kajian.php?id=${id}`, {
+  method: 'DELETE'
+  })
 
     if (!response.ok) {
       alert('Gagal menghapus kajian')
