@@ -165,7 +165,7 @@ onMounted(async () => {
   if (!isEditMode.value) return
 
   try {
-    const response = await fetch('/api/list-kajian.php')
+    const response = await fetch(`http://jadwalkajian.great-site.net/api/get-kajian.php?id=${kajianId.value}`)
     const data = await response.json()
 
     if (!response.ok) {
